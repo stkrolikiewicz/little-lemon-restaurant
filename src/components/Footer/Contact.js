@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
     return (
-        <>
+        <div id="contact" className="footer-item">
             <h4>Contact</h4>
             <ul>
                 <li>
@@ -16,7 +16,7 @@ const Contact = () => {
                 </li>
                 <li>address: 1234 Main St. New York, NY 10001</li>
             </ul>
-        </>
+        </div>
     );
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const Socials = () => {
     return (
-        <>
+        <div id="socials" className="footer-item">
             <h4>Social Media</h4>
             <ul>
                 <li>
@@ -26,7 +26,7 @@ const Socials = () => {
                     </a>
                 </li>
             </ul>
-        </>
+        </div>
     );
 };
 

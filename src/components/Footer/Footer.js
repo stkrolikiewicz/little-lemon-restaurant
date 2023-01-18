@@ -5,6 +5,9 @@ import Socials from "./Socials";
 const Footer = () => {
     return (
         <footer>
+            <div id="logo-footer" className="footer-item">
+                <h4>Little Lemon Logo</h4>
+            </div>
             <Nav />
             <Contact />
             <Socials />

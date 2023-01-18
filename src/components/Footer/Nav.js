@@ -2,7 +2,7 @@ import React from "react";
 
 const Nav = () => {
     return (
-        <nav>
+        <nav id="nav-footer" className="footer-item">
             <h4>Doormat Navigation</h4>
             <ul>
                 <li>
