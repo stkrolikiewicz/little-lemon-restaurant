@@ -59,6 +59,10 @@ footer {
 }
 
 #nav-header ul li a {
+    font-family: "Karla", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
     text-decoration: none;
     color: black;
 }
@@ -90,7 +94,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
 }
 
 #hero-section .content button {
@@ -119,6 +122,8 @@ footer {
     grid-template-areas:
         ". logo dnav con soc ."
         "p p p p p p";
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
 #nav-footer {
@@ -142,22 +147,40 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .footer-item ul li {
     list-style: none;
     flex-shrink: 1;
     flex-wrap: wrap;
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 10px;
+    color: #333333;
 }
 
 .footer-item ul li a {
     text-decoration: none;
-    color: black;
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333333;
+}
+
+.footer-item h4 {
+    color: #495e57;
+    margin-bottom: 15px;
+    border-bottom: 1px solid;
 }
 
 footer p {
     grid-area: p;
     text-align: center;
+    color: #333333;
 }
 
 #logo-footer {
@@ -171,14 +194,15 @@ footer p {
     background-color: rgb(4, 78, 53);
 }
 
-/* buttons */
+/* HTML elements - global styling */
 
-.btn {
+button {
     background: #f4ce14;
     color: black;
     border: none;
     border-radius: 16px;
     padding: 15px;
+    min-width: 200px;
     font-family: "Karla", sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -186,3 +210,45 @@ footer p {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+h1 {
+    font-family: "Markazi Text";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    color: #f4ce14;
+}
+h2 {
+    font-family: "Markazi Text";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #edefee;
+}
+
+p {
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 400;
+
+    color: #edefee;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+h4 {
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    color: black;
+}
+/* 
+font-family: 'Karla', sans-serif;
+font-family: 'Markazi Text', serif;
+*/

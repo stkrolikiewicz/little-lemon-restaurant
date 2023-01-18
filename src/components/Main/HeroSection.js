@@ -18,7 +18,7 @@ const HeroSection = () => {
                         commodo consequat.{" "}
                     </p>
                 </div>
-                <button className="btn">Reserve a table</button>
+                <button>Reserve a table</button>
             </div>
             <img src={photo} alt="Restaurant food." />
         </section>
