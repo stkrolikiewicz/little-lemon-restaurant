@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    display: grid;
+    /* height: 2900px; */
+    grid-template-areas:
+        "head"
+        "main"
+        "foot";
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+    grid-area: head;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 20px;
+    grid-template-areas: ". logo nav nav nav .";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main {
+    grid-area: main;
+    background-color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+footer {
+    grid-area: foot;
+    background-color: #f1f1f1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Header */
+
+#logo-header {
+    grid-area: logo;
+    width: 100%;
+}
+
+#nav-header {
+    grid-area: nav;
+    width: 100%;
+}
+
+#nav-header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+#nav-header ul li {
+    list-style: none;
+}
+
+#nav-header ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Main */
+
+/* - Hero Section */
+
+#hero-section {
+    background-color: blue;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-template-areas: ". cnt cnt img img .";
+}
+
+#hero-section .content {
+    grid-area: cnt;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#hero-section .content #titles {
+}
+
+#hero-section .content p {
+}
+
+#hero-section .content button {
+    width: calc(50% - 10px);
+}
+
+#hero-section img {
+    grid-area: img;
+    max-height: 350px;
+    width: 80%;
+    margin-left: 20%;
+    object-fit: cover;
+    border-radius: 16px;
 }

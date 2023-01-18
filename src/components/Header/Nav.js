@@ -2,7 +2,7 @@ import React from "react";
 
 const Nav = () => {
     return (
-        <nav>
+        <nav id="nav-header">
             <ul>
                 <li>
                     <a href="#home">HOME</a>
