@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "alt": "Greek Salad image",
+        "title": "Greek Salad",
+        "price": "$12.99",
+        "description": "Fresh greens, tomatoes, cucumbers, onions, feta cheese, and olives."
+    },
+    {
+        "id": 2,
+        "alt": "Bruschetta image",
+        "title": "Bruschetta",
+        "price": "$5.99",
+        "description": "Toasted bread with tomatoes, garlic, and basil."
+    },
+    {
+        "id": 3,
+        "alt": "Lemon Dessert image",
+        "title": "Lemon Dessert",
+        "price": "$5.00",
+        "description": "Lemon cake with lemon icing."
+    }
+]
