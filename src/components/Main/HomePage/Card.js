@@ -4,9 +4,6 @@ import orderIcon from "../../../assets/order.svg";
 const Card = (props) => {
     return (
         <div className="card">
-            {/* <div className="card-image">
-                
-            </div> */}
             <img src={props.image} alt={props.alt} />
             <div className="card-content">
                 <div>
