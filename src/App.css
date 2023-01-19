@@ -204,7 +204,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .testimonials {
@@ -215,7 +215,7 @@ footer {
     grid-column-gap: 20px;
 }
 
-/* Testinomianl */
+/* Testimonial */
 
 .testimonial {
     display: flex;
@@ -252,6 +252,48 @@ footer {
 .testimonial-photo img {
     border-radius: 5px;
 }
+
+/* About Section */
+
+#about-section {
+    /* background-color: #f1f1f1; */
+}
+
+#about-section .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    /* align-items: start; */
+    grid-template-areas: "cnt cnt img img";
+}
+
+#about-section .content {
+    grid-area: cnt;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#about-section .images {
+    grid-area: img;
+    width: 100%;
+    position: relative;
+}
+
+#about-section .images img {
+    width: 60%;
+}
+#img1 {
+    z-index: 10;
+}
+#img2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+}
+
 /* Footer */
 
 footer {
