@@ -15,15 +15,8 @@ const Specials = () => {
                     <button>Online Menu</button>
                 </div>
                 <div className="row2">
-                    {specials.map((special) => (
-                        <Card
-                            key={special.id}
-                            image={photos[special.id - 1]}
-                            alt={special.alt}
-                            title={special.title}
-                            price={special.price}
-                            description={special.description}
-                        />
+                    {specials.map((special, index) => (
+                        <Card key={index} {...special} image={photos[index]} />
                     ))}
                 </div>
             </div>

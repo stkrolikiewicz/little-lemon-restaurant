@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "alt": "Photo of Mike",
+        "name": "Mike",
+        "rate": "5",
+        "review": "Excellent service. I would recommend this to my friends and family."
+    },
+    {
+        "id": 2,
+        "alt": "Photo of Sophie",
+        "name": "Sophie",
+        "rate": "4",
+        "review": "I would recommend this to my friends and family."
+    },
+    {
+        "id": 3,
+        "alt": "Photo of Irene",
+        "name": "Irene",
+        "rate": "4.5",
+        "review": "I love eating here. The food is great and the service is excellent."
+    },
+    {
+        "id": 4,
+        "alt": "Photo of Matt",
+        "name": "Matt",
+        "rate": "5",
+        "review": "It's really nice restaurant. The food is great and delivery fast."
+    }
+]
