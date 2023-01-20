@@ -2,15 +2,18 @@ import React from "react";
 import Nav from "./Nav";
 import Contact from "./Contact";
 import Socials from "./Socials";
+import logo from "../../assets/Logo.svg";
 const Footer = () => {
     return (
         <footer>
-            <div id="logo-footer" className="footer-item">
-                <h4>Little Lemon Logo</h4>
+            <div className="container">
+                <Nav />
+                <Contact />
+                <Socials />
             </div>
-            <Nav />
-            <Contact />
-            <Socials />
+            <div id="logo-footer" className="footer-item">
+                <img src={logo} alt="logo" />
+            </div>
             <p>© 2023</p>
         </footer>
     );
