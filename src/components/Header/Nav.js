@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import hamburger from "../../assets/hamburger-menu.svg";
+import logo from "../../assets/Logo.svg";
 const Nav = () => {
     return (
-        <nav id="nav-header">
-            <ul>
+        <nav className="screen">
+            <img id="logo-header" src={logo} alt="logo" />
+            <img id="hamburger-menu" src={hamburger} alt="hamburger menu" />
+            <ul id="nav-header" className="screen">
                 <li>
                     <Link to="/">HOME</Link>
                 </li>
