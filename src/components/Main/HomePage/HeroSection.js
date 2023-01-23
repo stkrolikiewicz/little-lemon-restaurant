@@ -1,5 +1,6 @@
 import React from "react";
 import photo from "../../../assets/restauranfood.jpg";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
     return (
@@ -19,7 +20,9 @@ const HeroSection = () => {
                             ex ea commodo consequat.{" "}
                         </p>
                     </div>
-                    <button>Reserve a table</button>
+                    <Link to="/booking">
+                        <button>Reserve a table</button>
+                    </Link>
                 </div>
                 <img src={photo} alt="Restaurant food." />
             </div>

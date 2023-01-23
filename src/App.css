@@ -516,6 +516,27 @@ footer p {
     width: 100%;
 }
 
+/* Booking Section */
+
+#booking-section {
+}
+
+/* Booking Form */
+
+#booking-form {
+    grid-area: c;
+    display: grid;
+    max-width: 300px;
+    width: 100%;
+    gap: 20px;
+    margin-inline: auto;
+}
+.form-btn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* HTML elements - global styling */
 
 section {
@@ -531,7 +552,8 @@ section .container {
     grid-area: c;
 }
 
-button {
+button,
+.btn {
     background: #f4ce14;
     color: black;
     border: none;
