@@ -1,28 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const BookingForm = (props) => {
+    const navigate = useNavigate();
+    const availableTimes = props.availableTimes.filter(
+        (time) => time.available === true
+    );
+
     const [date, setDate] = useState("");
-    const [time, setTime] = useState("");
+    const [time, setTime] = useState(availableTimes[0].time);
     const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("");
 
-    const availableTimes = [
-        "17:00",
-        "18:00",
-        "19:00",
-        "20:00",
-        "21:00",
-        "22:00",
-    ];
-
-    // const availableTimes = props.availableTimes;
-
     const handleSubmit = (e) => {
         e.preventDefault();
+        const booking = {
+            date,
+            time,
+            guests,
+            occasion,
+        };
+        props.dispatch({ type: "book", time: time });
+        console.log(props.availableTimes);
+        navigate("/");
     };
 
     return (
-        <form id="booking-form">
+        <form id="booking-form" onSubmit={handleSubmit}>
             <label htmlFor="res-date">Choose date</label>
             <input
                 type="date"
@@ -40,11 +44,13 @@ const BookingForm = (props) => {
                     setTime(e.target.value);
                 }}
             >
-                {availableTimes.map((time) => (
-                    <option key={time} value={time}>
-                        {time}
-                    </option>
-                ))}
+                {availableTimes.map((time) => {
+                    return (
+                        <option key={time.id} value={time.time}>
+                            {time.time}
+                        </option>
+                    );
+                })}
             </select>
             <label htmlFor="guests">Number of guests</label>
             <input
@@ -73,7 +79,6 @@ const BookingForm = (props) => {
                 type="submit"
                 className="btn form-btn"
                 value="Make Your reservation"
-                onSubmit={handleSubmit}
             />
         </form>
     );
