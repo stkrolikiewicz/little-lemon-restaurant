@@ -2,81 +2,41 @@ import React, { useReducer, useState, useEffect } from "react";
 import About from "./HomePage/About";
 import HomePage from "./HomePage/HomePage";
 import BookingPage from "./BookingPage/BookingPage";
+import ConfirmedBooking from "./BookingPage/ConfirmedBooking";
 import Menu from "./Menu";
 import OrderOnline from "./OrderOnline";
 import LoginPage from "./LoginPage";
 import { Routes, Route } from "react-router-dom";
+import { fetchAPI } from "../../api/api";
 
 const Main = () => {
-    const initializeTimes = [
-        {
-            id: 1,
-            time: "17:00",
-            available: true,
-        },
-        {
-            id: 2,
-            time: "18:00",
-            available: true,
-        },
-        {
-            id: 3,
-            time: "19:00",
-            available: true,
-        },
-        {
-            id: 4,
-            time: "20:00",
-            available: true,
-        },
-        {
-            id: 5,
-            time: "21:00",
-            available: true,
-        },
-        {
-            id: 6,
-            time: "22:00",
-            available: true,
-        },
-    ];
+    const initializeTimes = () => {
+        const today = new Date();
+        let list = fetchAPI(today);
+        return list;
+    };
 
     const updateTimes = (state, action) => {
         switch (action.type) {
-            case "book":
-                return state.map((time) => {
-                    if (time.time === action.time) {
-                        return {
-                            ...time,
-                            available: false,
-                        };
+            case "book": {
+                const list = state.map((time) => {
+                    if (time === action.time) {
+                        return "booked";
                     } else {
                         return time;
                     }
                 });
-            case "cancel":
-                return state.map((time) => {
-                    if (time.id === action.id) {
-                        return {
-                            ...time,
-                            available: true,
-                        };
-                    } else {
-                        return time;
-                    }
-                });
+                return list.filter((time) => time !== "booked");
+            }
             default:
                 return state;
         }
     };
 
-    const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
-
-    useEffect(() => {
-        console.log(availableTimes);
-    }, [availableTimes]);
-
-    const times = availableTimes.filter((time) => time.available === true);
+    const [availableTimes, dispatch] = useReducer(
+        updateTimes,
+        initializeTimes()
+    );
 
     return (
         <main>
@@ -88,11 +48,15 @@ const Main = () => {
                     path="/booking"
                     element={
                         <BookingPage
-                            availableTimes={times}
-                            firstTime={times[0].time}
+                            availableTimes={availableTimes}
+                            firstTime={availableTimes[0]}
                             dispatch={dispatch}
                         />
                     }
+                />
+                <Route
+                    path="/booking/confirmation"
+                    element={<ConfirmedBooking />}
                 />
                 <Route path="/order-online" element={<OrderOnline />} />
                 <Route pathe="/login" element={<LoginPage />} />

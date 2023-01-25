@@ -4,29 +4,30 @@
     box-sizing: border-box;
 }
 
-body {
-    display: grid;
-    height: auto;
-    grid-template-areas:
-        "head"
-        "main"
-        "foot";
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, fit-content(100%));
+#root {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
 }
 
 header {
-    grid-area: head;
     padding-block: 20px;
+    /* flex-grow: 0; */
 }
 
 main {
-    grid-area: main;
     background-color: #ffffff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-block: 1px solid #a09e9e;
 }
 
 footer {
-    grid-area: foot;
+    /* flex-grow: 0; */
+    margin-top: auto;
     /* background-color: #f1f1f1; */
 }
 
@@ -519,6 +520,7 @@ footer p {
 /* Booking Section */
 
 #booking-section {
+    /* border-block: 1px solid #333333; */
 }
 
 /* Booking Form */
@@ -537,6 +539,22 @@ footer p {
     flex-wrap: wrap;
 }
 
+/* Booking Confirmation Section */
+
+#confirmation-section {
+    /* background-color: #f8e681; */
+    /* border-block: 1px solid #333333; */
+}
+#confirmation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #a9fcb0;
+    padding: 20px;
+    border-radius: 16px;
+}
+
 /* HTML elements - global styling */
 
 section {
@@ -546,10 +564,12 @@ section {
     grid-column-gap: 20px;
     /* align-items: start; */
     grid-template-areas: ". c c c c .";
+    flex: 1;
 }
 
 section .container {
     grid-area: c;
+    margin-block: auto;
 }
 
 button,

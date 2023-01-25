@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { submitAPI } from "../../../api/api";
+import { Routes, Route } from "react-router-dom";
 
 const BookingForm = ({ availableTimes, firstTime, dispatch }) => {
     const navigate = useNavigate();
@@ -9,10 +11,6 @@ const BookingForm = ({ availableTimes, firstTime, dispatch }) => {
     const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("");
 
-    useEffect(() => {
-        console.log(typeof availableTimes);
-    }, [availableTimes]);
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const booking = {
@@ -21,20 +19,9 @@ const BookingForm = ({ availableTimes, firstTime, dispatch }) => {
             guests,
             occasion,
         };
+        if (submitAPI(booking)) navigate("/booking/confirmation");
         dispatch({ type: "book", time: time });
-        console.log(availableTimes);
-        navigate("/");
     };
-
-    // const renderListOfTimes = (times) => {
-    //     return times?.map((time) => {
-    //         return (
-    //             <option key={time.id} value={time.time}>
-    //                 {time.time}
-    //             </option>
-    //         );
-    //     });
-    // };
 
     return (
         <form id="booking-form" onSubmit={handleSubmit}>
@@ -58,8 +45,8 @@ const BookingForm = ({ availableTimes, firstTime, dispatch }) => {
             >
                 {availableTimes?.map((time) => {
                     return (
-                        <option key={time.id} value={time.time}>
-                            {time.time}
+                        <option key={time} value={time}>
+                            {time}
                         </option>
                     );
                 })}
