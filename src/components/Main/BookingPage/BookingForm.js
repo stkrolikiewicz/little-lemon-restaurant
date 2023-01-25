@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { submitAPI } from "../../../api/api";
-import { Routes, Route } from "react-router-dom";
 
 const BookingForm = ({ availableTimes, firstTime, dispatch }) => {
     const navigate = useNavigate();
@@ -33,6 +32,7 @@ const BookingForm = ({ availableTimes, firstTime, dispatch }) => {
                 onChange={(e) => {
                     setDate(e.target.value);
                 }}
+                required
             />
             <label htmlFor="res-time">Choose time</label>
             <select
@@ -62,6 +62,7 @@ const BookingForm = ({ availableTimes, firstTime, dispatch }) => {
                 onChange={(e) => {
                     setGuests(e.target.value);
                 }}
+                required
             />
             <label htmlFor="occasion">Occasion</label>
             <select
@@ -71,6 +72,7 @@ const BookingForm = ({ availableTimes, firstTime, dispatch }) => {
                 }}
                 value={occasion}
             >
+                <option value="">-</option>
                 <option>Birthday</option>
                 <option>Anniversary</option>
             </select>
