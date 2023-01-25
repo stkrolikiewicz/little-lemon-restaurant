@@ -76,6 +76,8 @@ const Main = () => {
         console.log(availableTimes);
     }, [availableTimes]);
 
+    const times = availableTimes.filter((time) => time.available === true);
+
     return (
         <main>
             <Routes>
@@ -86,7 +88,8 @@ const Main = () => {
                     path="/booking"
                     element={
                         <BookingPage
-                            availableTimes={availableTimes}
+                            availableTimes={times}
+                            firstTime={times[0].time}
                             dispatch={dispatch}
                         />
                     }

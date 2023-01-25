@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const BookingForm = (props) => {
+const BookingForm = ({ availableTimes, firstTime, dispatch }) => {
     const navigate = useNavigate();
-    const availableTimes = props.availableTimes.filter(
-        (time) => time.available === true
-    );
 
     const [date, setDate] = useState("");
-    const [time, setTime] = useState(availableTimes[0].time);
+    const [time, setTime] = useState(firstTime);
     const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("");
+
+    useEffect(() => {
+        console.log(typeof availableTimes);
+    }, [availableTimes]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,10 +21,20 @@ const BookingForm = (props) => {
             guests,
             occasion,
         };
-        props.dispatch({ type: "book", time: time });
-        console.log(props.availableTimes);
+        dispatch({ type: "book", time: time });
+        console.log(availableTimes);
         navigate("/");
     };
+
+    // const renderListOfTimes = (times) => {
+    //     return times?.map((time) => {
+    //         return (
+    //             <option key={time.id} value={time.time}>
+    //                 {time.time}
+    //             </option>
+    //         );
+    //     });
+    // };
 
     return (
         <form id="booking-form" onSubmit={handleSubmit}>
@@ -38,13 +49,14 @@ const BookingForm = (props) => {
             />
             <label htmlFor="res-time">Choose time</label>
             <select
-                id="res-time "
+                id="res-time"
                 value={time}
                 onChange={(e) => {
                     setTime(e.target.value);
                 }}
+                data-testid="res-time"
             >
-                {availableTimes.map((time) => {
+                {availableTimes?.map((time) => {
                     return (
                         <option key={time.id} value={time.time}>
                             {time.time}

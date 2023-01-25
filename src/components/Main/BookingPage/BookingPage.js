@@ -5,6 +5,7 @@ const BookingPage = (props) => {
         <section id="booking-section">
             <BookingForm
                 availableTimes={props.availableTimes}
+                firstTime={props.firstTime}
                 dispatch={props.dispatch}
             />
         </section>
