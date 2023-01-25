@@ -12,7 +12,7 @@ const Specials = () => {
             <div className="container">
                 <div className="row1">
                     <h1>This week specials!</h1>
-                    <button>Online Menu</button>
+                    <button aria-label="On Click">Online Menu</button>
                 </div>
                 <div className="row2">
                     {specials.map((special, index) => (

@@ -9,22 +9,40 @@ const Nav = () => {
             <img id="hamburger-menu" src={hamburger} alt="hamburger menu" />
             <ul id="nav-header" className="screen">
                 <li>
-                    <Link to="/">HOME</Link>
+                    <Link to="/" aria-label="On Click">
+                        HOME
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/about">ABOUT</Link>
+                    <Link to="/about" aria-label="On Click">
+                        ABOUT
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/menu">MENU</Link>
+                    <Link to="/menu" aria-label="On Click">
+                        MENU
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/booking">RESERVATIONS</Link>
+                    {true ? (
+                        <Link to="/booking" aria-label="On Click">
+                            RESERVATIONS
+                        </Link>
+                    ) : (
+                        <Link className="disabled" aria-label="On Click">
+                            RESERVATIONS
+                        </Link>
+                    )}
                 </li>
                 <li>
-                    <Link to="/order-online">ORDER ONLINE</Link>
+                    <Link to="/order-online" aria-label="On Click">
+                        ORDER ONLINE
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/login">LOGIN</Link>
+                    <Link to="/login" aria-label="On Click">
+                        LOGIN
+                    </Link>
                 </li>
             </ul>
         </nav>

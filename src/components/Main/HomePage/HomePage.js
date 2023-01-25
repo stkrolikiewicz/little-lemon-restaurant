@@ -4,10 +4,10 @@ import Specials from "./Specials";
 import Testimonials from "./Testimonials";
 import About from "./About";
 
-const HomePage = () => {
+const HomePage = ({ resBlocked }) => {
     return (
         <>
-            <HeroSection />
+            <HeroSection resBlocked={resBlocked} />
             <Specials />
             <Testimonials />
             <About />

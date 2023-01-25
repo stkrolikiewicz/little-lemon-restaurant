@@ -2,7 +2,7 @@ import React from "react";
 import photo from "../../../assets/restauranfood.jpg";
 import { Link } from "react-router-dom";
 
-const HeroSection = () => {
+const HeroSection = ({ resBlocked }) => {
     return (
         <section id="hero-section">
             <div className="container">
@@ -21,7 +21,13 @@ const HeroSection = () => {
                         </p>
                     </div>
                     <Link to="/booking">
-                        <button>Reserve a table</button>
+                        <button
+                            disabled={resBlocked}
+                            aria-disabled={resBlocked}
+                            aria-label="On Click"
+                        >
+                            Reserve a table
+                        </button>
                     </Link>
                 </div>
                 <img src={photo} alt="Restaurant food." />

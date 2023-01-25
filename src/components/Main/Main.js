@@ -41,7 +41,10 @@ const Main = () => {
     return (
         <main>
             <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route
+                    path="/"
+                    element={<HomePage resBlocked={!availableTimes.length} />}
+                />
                 <Route path="/about" element={<About />} />
                 <Route path="/menu" element={<Menu />} />
                 <Route
