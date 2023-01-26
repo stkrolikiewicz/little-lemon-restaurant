@@ -6,7 +6,13 @@ Feature of a Little Lemon Restaurant web application responsible for reserving a
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Run
-Run project using command:
+
+1. First, install all needed packages:
+```
+npm install
+```
+
+2. Run project using command:
 ```
 npm start
 ```
