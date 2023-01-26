@@ -1,7 +1,8 @@
 # Little Lemon Restaurant
 
 ## Introduction
-Feature of a Little Lemon Restaurant web application responsible for reserving a table by clients.
+Responsive web page of Little Lemon Restaurant.
+The project have already developed hompage and a feature responsible for reserving a table by clients.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
