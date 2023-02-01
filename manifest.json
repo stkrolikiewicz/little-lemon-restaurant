@@ -1,0 +1,15 @@
+{
+    "short_name": "Little Lemon",
+    "name": "Little Lemon © 2023",
+    "icons": [
+        {
+            "src": "lemon.jpg",
+            "type": "image/jpg",
+            "sizes": "192x192"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+}
