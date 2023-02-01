@@ -6,6 +6,8 @@ The project has already developed homepage and a feature responsible for reservi
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+See deployed site: [Little Lemon](https://stkrolikiewicz.github.io/little-lemon-restaurant)
+
 ## Run
 
 1. First, install all needed packages:
