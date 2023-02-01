@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/little-lemon-restaurant/static/css/main.9bb36c60.css",
-    "main.js": "/little-lemon-restaurant/static/js/main.f7912bef.js",
+    "main.css": "/little-lemon-restaurant/static/css/main.ade3af3e.css",
+    "main.js": "/little-lemon-restaurant/static/js/main.31b1f03e.js",
     "static/js/787.9322e090.chunk.js": "/little-lemon-restaurant/static/js/787.9322e090.chunk.js",
     "static/media/chefs.jpg": "/little-lemon-restaurant/static/media/chefs.6ba0e06bfa9c1ea75109.jpg",
     "static/media/bruchetta.svg": "/little-lemon-restaurant/static/media/bruchetta.29ea078fea3d3120ed22402e901b5bbc.svg",
@@ -17,12 +17,12 @@
     "index.html": "/little-lemon-restaurant/index.html",
     "static/media/order.svg": "/little-lemon-restaurant/static/media/order.d94641b75763c324b3a19a07d4cb5a43.svg",
     "static/media/hamburger-menu.svg": "/little-lemon-restaurant/static/media/hamburger-menu.0da6f67ced800ab909f63d5144de37ee.svg",
-    "main.9bb36c60.css.map": "/little-lemon-restaurant/static/css/main.9bb36c60.css.map",
-    "main.f7912bef.js.map": "/little-lemon-restaurant/static/js/main.f7912bef.js.map",
+    "main.ade3af3e.css.map": "/little-lemon-restaurant/static/css/main.ade3af3e.css.map",
+    "main.31b1f03e.js.map": "/little-lemon-restaurant/static/js/main.31b1f03e.js.map",
     "787.9322e090.chunk.js.map": "/little-lemon-restaurant/static/js/787.9322e090.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bb36c60.css",
-    "static/js/main.f7912bef.js"
+    "static/css/main.ade3af3e.css",
+    "static/js/main.31b1f03e.js"
   ]
 }
