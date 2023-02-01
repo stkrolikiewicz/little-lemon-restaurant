@@ -42,6 +42,10 @@ const Main = () => {
         <main>
             <Routes>
                 <Route
+                    path="*"
+                    element={<HomePage resBlocked={!availableTimes.length} />}
+                />
+                <Route
                     path="/"
                     element={<HomePage resBlocked={!availableTimes.length} />}
                 />
